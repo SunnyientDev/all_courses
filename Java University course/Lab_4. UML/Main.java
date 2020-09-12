@@ -50,7 +50,9 @@ public class Rectangle extends Shape{
     public void setWidth(){ this.Width = Width; }
     public void setLength(){ this.Length = Length; }
 
-    public String toString(){ return "Sth"; }
+    public String toString(){ 
+        return "Rectangle parameters:\nWidth: " + Width + "\nLength: " + Length + "\nArea: " + getArea() + "\nPerimeter: " + getPerimeter() + "\n"; 
+    }
 }
 
 public class Circle extends Shape{
@@ -73,7 +75,9 @@ public class Circle extends Shape{
     public double getPerimeter(){ return 2* Math.PI*Radius; }
 
     public void setRadius(){ this.Radius = Radius; }
-    public String toString(){ return "Sth"; }
+    public String toString(){
+        return "Circle parameters:\nRadius: " + Radius + "\nArea: " + getArea() + "\nPerimeter: " + getPerimeter() + "\n"; 
+ }
 }
 
 public class Square extends Rectangle{
@@ -97,5 +101,7 @@ public class Square extends Rectangle{
     public double getSide(){ return Length; }
     public void setWidth(double Width){ this.Width = Width; }
     public void setLength(double Length){ this.Length = Length; }
-    public String toString(){ return "Sth"; }
+    public String toString(){         
+        return "Square parameters:\nSide: " + Length + "\nArea: " + getArea() + "\nPerimeter: " + getPerimeter() + "\n"; 
+ }
 }
