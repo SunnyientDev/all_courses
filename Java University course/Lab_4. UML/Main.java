@@ -7,7 +7,7 @@ public class Main {
     }
 }
 
-abstract public class Shape {
+abstract class Shape {
     protected String Colour = "red";
     protected boolean Filled = true;
 
@@ -22,7 +22,6 @@ abstract public class Shape {
     public void setFilled(){ this.Filled = Filled; }
     public String getColour(){ return Colour; }
     public boolean isFilled(){ return Filled; }
-
 }
 
 public class Rectangle extends Shape{
@@ -42,6 +41,7 @@ public class Rectangle extends Shape{
     }
 
     public Rectangle(){}
+    
     public double getWidth(){ return Width; }
     public double getLength(){ return Length; }
     public double getArea(){ return Length*Width; }
@@ -57,15 +57,13 @@ public class Circle extends Shape{
     double Radius = 1;
 
     public Circle(double Radius, String Colour, boolean Filled){
-        this.Width = Width;
-        this.Length = Length;
+        this.Radius = Radius;
         this.Colour = Colour;
         this.Filled = Filled;
     }
 
     public Circle(double Radius){
-        this.Width = Width;
-        this.Length = Length;
+        this.Radius = Radius;
     }
 
     public Circle(){}
