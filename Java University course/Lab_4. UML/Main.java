@@ -3,9 +3,9 @@ import java.lang.Math.*;
 
 public class Main {
     public static void main(String[] args) {
-        Circle OneCircle = new Circle(3.2,"cd",true); //If False, OUTPUT: " "
-        Rectangle OneRectangle = new Rectangle(3.4,4.5,"Red",true);
-        Square NewSquare = new Square(4,"Blue",true);
+        Circle OneCircle = new Circle(7,"cd",true); //If False, OUTPUT: " "
+        Rectangle OneRectangle = new Rectangle(6,5,"Red",true);
+        Square NewSquare = new Square(7,"Blue",true);
 
         System.out.print(OneCircle.toString()+"\n" + OneRectangle.toString() + "\n" + NewSquare.toString());
     }
