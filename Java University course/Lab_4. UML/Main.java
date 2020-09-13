@@ -3,7 +3,11 @@ import java.lang.Math.*;
 
 public class Main {
     public static void main(String[] args) {
+        Circle OneCircle = new Circle(3.2,"cd",true); //If False, OUTPUT: " "
+        Rectangle OneRectangle = new Rectangle(3.4,4.5,"Red",true);
+        Square NewSquare = new Square(4,"Blue",true);
 
+        System.out.print(OneCircle.toString()+"\n" + OneRectangle.toString() + "\n" + NewSquare.toString());
     }
 }
 
@@ -24,7 +28,7 @@ abstract class Shape {
     public boolean isFilled(){ return Filled; }
 }
 
-public class Rectangle extends Shape{
+class Rectangle extends Shape{
     double Width = 1;
     double Length = 1;
 
@@ -41,7 +45,7 @@ public class Rectangle extends Shape{
     }
 
     public Rectangle(){}
-    
+
     public double getWidth(){ return Width; }
     public double getLength(){ return Length; }
     public double getArea(){ return Length*Width; }
@@ -50,12 +54,12 @@ public class Rectangle extends Shape{
     public void setWidth(){ this.Width = Width; }
     public void setLength(){ this.Length = Length; }
 
-    public String toString(){ 
-        return "Rectangle parameters:\nWidth: " + Width + "\nLength: " + Length + "\nArea: " + getArea() + "\nPerimeter: " + getPerimeter() + "\n"; 
+    public String toString(){
+        return "Rectangle parameters:\nWidth: " + Width + "\nLength: " + Length + "\nArea: " + getArea() + "\nPerimeter: " + getPerimeter() + "\n";
     }
 }
 
-public class Circle extends Shape{
+class Circle extends Shape{
     double Radius = 1;
 
     public Circle(double Radius, String Colour, boolean Filled){
@@ -76,11 +80,11 @@ public class Circle extends Shape{
 
     public void setRadius(){ this.Radius = Radius; }
     public String toString(){
-        return "Circle parameters:\nRadius: " + Radius + "\nArea: " + getArea() + "\nPerimeter: " + getPerimeter() + "\n"; 
- }
+        return "Circle parameters:\nRadius: " + Radius + "\nArea: " + getArea() + "\nPerimeter: " + getPerimeter() + "\n";
+    }
 }
 
-public class Square extends Rectangle{
+class Square extends Rectangle{
     public Square(){}
 
     public Square(double Side) {
@@ -101,7 +105,7 @@ public class Square extends Rectangle{
     public double getSide(){ return Length; }
     public void setWidth(double Width){ this.Width = Width; }
     public void setLength(double Length){ this.Length = Length; }
-    public String toString(){         
-        return "Square parameters:\nSide: " + Length + "\nArea: " + getArea() + "\nPerimeter: " + getPerimeter() + "\n"; 
- }
+    public String toString(){
+        return "Square parameters:\nSide: " + Length + "\nArea: " + getArea() + "\nPerimeter: " + getPerimeter() + "\n";
+    }
 }
