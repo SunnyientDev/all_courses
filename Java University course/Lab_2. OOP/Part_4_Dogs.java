@@ -31,9 +31,6 @@ public class Main {
 
         System.out.print(OneDogNurs.Dogs.get(0));
         //Dog[] Nursery = new Dog [] {Dog1, Dog2};
-        
-        
-
     }
 }
 
