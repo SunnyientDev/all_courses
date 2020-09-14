@@ -8,6 +8,9 @@ public class Human {
         Head Head1 = new Head(); Head1.Setter("Blue", 20, 57);
         Leg Leg1 = new Leg(); Leg1.Setter(122, 20);
         Hand Hand1 = new Hand(); Hand1.Setter(40, 14);
+        
+        Leg Leg2 = new Leg(); Leg2.Setter(122, 20);
+        Hand Hand2 = new Hand(); Hand2.Setter(40, 14);
 
         Head1.HeadInfo();
         Leg1.LegsInfo();
