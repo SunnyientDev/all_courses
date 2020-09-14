@@ -30,6 +30,7 @@ public class Main {
         Dog2.PrintInfo2();
 
         System.out.print(OneDogNurs.Dogs.get(0));
+        System.out.print(OneDogNurs.Dogs.get(1));
         //Dog[] Nursery = new Dog [] {Dog1, Dog2};
     }
 }
