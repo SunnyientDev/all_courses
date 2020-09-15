@@ -1,37 +1,30 @@
 package com.company;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner Data_In = new Scanner(System.in);
-        System.out.print("Please, enter name and age of the dog \n");
-        System.out.print("Name: "); String Name1 = Data_In.nextLine();
-        System.out.print("Age: "); int Age1 = Data_In.nextInt();
+        DogNurs OneDogNurs = new DogNurs();
 
-        DogNurs OneDogNurs = new DogNurs();   
-        
+        System.out.print("Name: "); String Name1 = "Holly";
+        System.out.print("Age: "); int Age1 = 6;
         Dog Dog1 = new Dog(Name1, Age1);
-        OneDogNurs.Push(Dog1);
-        
         Dog1.PrintAge();
         Dog1.PrintInfo1();
+        OneDogNurs.Push(Dog1);
 
         System.out.println("\n----------------------------------------------------");
-        //System.out.print("Please enter name and age of another dog \n");String Name2 = "Bobby";
+
         String Name2 = "Bobby"; int Age2 = 3;
         System.out.println("Name: " + Name2);
         System.out.print("Age: " + Age2);
-
         Dog Dog2 = new Dog();
-        OneDogNurs.Push(Dog2);
-        
         Dog2.SetAge(Age2);
         Dog2.SetName(Name2);
         Dog2.PrintInfo2();
+        OneDogNurs.Push(Dog2);
 
         System.out.print(OneDogNurs.Dogs.get(0));
         System.out.print(OneDogNurs.Dogs.get(1));
-        //Dog[] Nursery = new Dog [] {Dog1, Dog2};
     }
 }
 
