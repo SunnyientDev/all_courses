@@ -13,10 +13,10 @@ class Human {
     Hand HandL = new Hand(); Hand HandR = new Hand();
 
     void MakeHuman(){
-        LegL.Setter(38, 12);
-        LegR.Setter(35, 12);
-        HandL.Setter(51, 4);
-        HandR.Setter(50, 4);
+        LegL.Setter(22, 12);
+        LegR.Setter(22, 12);
+        HandL.Setter(22, 4);
+        HandR.Setter(22, 4);
         OneHead.Setter("Dark", 4, 22);
     }
 
