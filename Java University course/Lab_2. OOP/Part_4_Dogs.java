@@ -65,7 +65,7 @@ class Dog {
 
 class DogNurs{
     ArrayList<Dog> Dogs = new ArrayList<Dog>();
-    void Push(Dog ... OneGog){
+    void Push(Dog OneGog){
         Dogs.add(OneDog);
     }
 }
