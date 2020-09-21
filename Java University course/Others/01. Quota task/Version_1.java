@@ -1,4 +1,4 @@
-//Be careful there are O(n^3)
+//Be careful there is O(n^3)
 import java.util.Scanner;
 
 public class Main
