@@ -14,7 +14,3 @@ public class Main {
         System.out.print(OneCircle.CircleCenter.toString());
     }
 }
-
-
-
-
