@@ -11,16 +11,16 @@ public class MovableCircle implements Movable {
     }
 
     @Override
-    public void MoveLeft()  { CircleCenter.x_Position -= CircleCenter.x_Speed; }
+    public void MoveLeft()  { CircleCenter.x_Position -= CircleCenter.x_Moving; }
 
     @Override
-    public void MoveRight() { CircleCenter.x_Position += CircleCenter.x_Speed; }
+    public void MoveRight() { CircleCenter.x_Position += CircleCenter.x_Moving; }
 
     @Override
-    public void MoveUp()    { CircleCenter.y_Position += CircleCenter.y_Speed; }
+    public void MoveUp()    { CircleCenter.y_Position += CircleCenter.y_Moving; }
 
     @Override
-    public void MoveDown()  { CircleCenter.y_Position -= CircleCenter.y_Speed; }
+    public void MoveDown()  { CircleCenter.y_Position -= CircleCenter.y_Moving; }
 
     @Override
     //as in the example
