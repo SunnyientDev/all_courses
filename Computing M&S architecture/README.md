@@ -1,1 +1,2 @@
-Computing M&S architecture
+1. Test project
+2. Lab number 2
