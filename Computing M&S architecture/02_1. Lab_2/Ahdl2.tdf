@@ -1,0 +1,11 @@
+subdesign 'Lab_2'
+(
+	A, B, C, D: input;
+				Y: output;
+)
+
+begin
+
+Y = (A and B) or (C and D) or ((A and B) xor (B and D));
+
+end;
