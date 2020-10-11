@@ -17,7 +17,7 @@ public class Main {
 
         OneCompany.DoAnything(new SelectorEmployee() {
             @Override
-            public boolean myBeHandled(Employee OneEmployee) {
+            public boolean isNeed(Employee OneEmployee) {
 
                 return OneEmployee.getSalary()<6_000;
             }
