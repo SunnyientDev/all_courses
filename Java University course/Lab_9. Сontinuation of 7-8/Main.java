@@ -18,11 +18,9 @@ public class Main {
         OneCompany.DoAnything(new SelectorEmployee() {
             @Override
             public boolean isNeed(Employee OneEmployee) {
-
-                return OneEmployee.getSalary()<6_000;
+                return OneEmployee.getSalary() < 6_000;
             }
         },OneEmployee -> OneEmployee.getSalary());
-
         OneCompany.DoAnything(new SelectorSalary(4000), OneEmployee -> OneEmployee.getSalary());
     }
 }
