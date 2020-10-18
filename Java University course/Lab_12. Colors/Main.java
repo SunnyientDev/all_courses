@@ -13,7 +13,7 @@ public class Main {
     }
 
     public static void ToConsole(String ColorNum, Colors OneColor){
-        String OUTPUT = "\u001B[" + OneColor.getValue() + "m";
-        System.out.println(OUTPUT + ColorNum + ANSI_WHITE);
+        String YourColor = "\u001B[" + OneColor.getValue() + "m";
+        System.out.println(YourColor + ColorNum + ANSI_WHITE);
     }
 }
