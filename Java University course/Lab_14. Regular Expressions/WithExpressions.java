@@ -30,7 +30,7 @@ public class WithExpressions {
             RegEx.append(RuleConverted.get(i).getKey());
 
             if(i < RuleConverted.size() - 1){
-                RegEx.append("End");
+                RegEx.append("|");
             }
         }
 
