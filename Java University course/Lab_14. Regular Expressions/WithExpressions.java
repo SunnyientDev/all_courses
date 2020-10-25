@@ -2,7 +2,6 @@ package com.company;
 
 import javax.xml.crypto.Data;
 import java.util.*;
-import java.util.regex.Pattern;
 import java.util.regex.*;
 
 public class WithExpressions {
