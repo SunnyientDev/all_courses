@@ -1,4 +1,5 @@
 package Lab_25_26;
+import javax.xml.crypto.dsig.keyinfo.KeyValue;
 import java.util.*;
 
 public class HashMapClass<K,V> implements HashMapInterface<K,V> {
@@ -23,6 +24,7 @@ public class HashMapClass<K,V> implements HashMapInterface<K,V> {
     public void add(K key, V value) {
         int CurrentIndex = key.hashCode() % HashList.size();
 
+        /*Отл
         if (HashList.get(CurrentIndex).size() != 0) {
             boolean Condition = false;
 
@@ -33,6 +35,17 @@ public class HashMapClass<K,V> implements HashMapInterface<K,V> {
                 }
             } if (Condition == true) HashList.get(CurrentIndex).add(new HashMapElement<>(key, value));
         } else HashList.get(CurrentIndex).add(new HashMapElement<>(key, value));
+    */
+
+        if(HashList.get(CurrentIndex).size() != 0){
+            for (int i = 0; i < HashList.get(i).size(); i++)
+                if(HashList.get(CurrentIndex).get(i).getKey().equals(key)){
+                    HashList.get(CurrentIndex).set(i, new HashMapElement<>(key, value));
+                    break;
+                }
+        } else {
+            HashList.get(CurrentIndex).add(new HashMapElement<>(key, value));
+        }
     }
 
     //get key
@@ -64,24 +77,24 @@ public class HashMapClass<K,V> implements HashMapInterface<K,V> {
         } return null;
     }
 
-//Class 'HashMapClass' must either be declared abstract or implement abstract method 'iterator()' in 'Iterable'
+    //Class 'HashMapClass' must either be declared abstract or implement abstract method 'iterator()' in 'Iterable'
     private class DesiredIterator implements Iterator<V> {
         private int ElementIndex = 0;
         private int ArrayIndex = 0;
 
-    //Class 'DesiredIterator' must either be declared abstract or implement abstract method 'hasNext()' in 'Iterator'
-    @Override
-    public boolean hasNext() {
-        if (ElementIndex == HashList.get(ArrayIndex).size()) {
-            ElementIndex = 0;
-            while(ArrayIndex < HashMapSize && HashList.get(ArrayIndex).size() == 0) ArrayIndex++;
+        //Class 'DesiredIterator' must either be declared abstract or implement abstract method 'hasNext()' in 'Iterator'
+        @Override
+        public boolean hasNext() {
+            if (ElementIndex == HashList.get(ArrayIndex).size()) {
+                ElementIndex = 0;
+                while(ArrayIndex < HashMapSize && HashList.get(ArrayIndex).size() == 0) ArrayIndex++;
+            }
+            return ArrayIndex < HashMapSize;
         }
-        return ArrayIndex < HashMapSize;
-    }
 
-    @Override
-    public V next() {
-        return HashList.get(ArrayIndex).get(ElementIndex + 1).getValue();
+        @Override
+        public V next() {
+            return HashList.get(ArrayIndex).get(ElementIndex + 1).getValue();
+        }
     }
-}
 }
