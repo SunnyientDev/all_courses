@@ -1,5 +1,5 @@
 SELECT
-	a.partner_rk
+	count(*)
 FROM
 	msu_analytics.partner a
 	left join msu_analytics.location b
@@ -7,4 +7,4 @@ FROM
 WHERE
 	b.partner_rk is NULL
 ORDER BY
-	a
+	1
