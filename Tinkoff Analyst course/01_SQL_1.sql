@@ -6,5 +6,5 @@ FROM
 		on a.partner_rk = b.partner_rk
 WHERE
 	b.partner_rk is NULL
-GROUP BY
-	1
+ORDER BY
+	a
