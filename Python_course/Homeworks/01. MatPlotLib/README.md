@@ -1,6 +1,10 @@
-Ссылка на проект:
+# Содержание 
 
-https://colab.research.google.com/drive/1fW4vWQeJnUcUOHARElGrqaGv8ZaaHm1H?usp=sharing
+1. В папке "Module Task" решение задачи про импортирование модулей.
+2. В папке "Schelling task" решение задания по сегрегации Шиллинга (с визуализацией)
+Если нотбук не открывается, перейдите по ссылке: https://colab.research.google.com/drive/15EsrctT2tjZviPfewDhkd2Z-vEqSi80K?usp=sharing
+3. Нотбук Answer содержит ответы на остальные задания (PEP8, Kispython статистика, Статистика по играм)
+Если не откроется, перейти по ссылке: https://colab.research.google.com/drive/1fW4vWQeJnUcUOHARElGrqaGv8ZaaHm1H?usp=sharing
 
 
 # Практическое занятие №3
