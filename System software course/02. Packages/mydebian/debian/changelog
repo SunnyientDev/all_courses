@@ -1,0 +1,5 @@
+mydebian (0.0.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Sasha Oronovskaya <sunnyient@unknown>  Sat, 10 Apr 2021 10:14:21 +0300

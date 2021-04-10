@@ -1,0 +1,34 @@
+Format: 1.8
+Date: Sat, 10 Apr 2021 10:14:21 +0300
+Source: mydebian
+Binary: mydebian
+Architecture: source amd64
+Version: 0.0.1-1
+Distribution: unstable
+Urgency: medium
+Maintainer: Sasha Oronovskaya <sunnyient@unknown>
+Changed-By: Sasha Oronovskaya <sunnyient@unknown>
+Description:
+ mydebian   - <insert up to 60 chars description>
+Changes:
+ mydebian (0.0.1-1) unstable; urgency=medium
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ 57bbd6f8b32e5fa9f3b56371f15267c38f3d97e1 835 mydebian_0.0.1-1.dsc
+ 5b7efaeb90035b8fa9cf65a0c1ef2b177341025c 2436 mydebian_0.0.1.orig.tar.xz
+ b690e985351d6994128c84ed3af5166d10d0fa5b 7876 mydebian_0.0.1-1.debian.tar.xz
+ cc17ae74f5aa633bb727e6a23514adc19b8ccb62 5713 mydebian_0.0.1-1_amd64.buildinfo
+ 5f41ca6b0a21b08fe6444e74090afe3164b9d198 2368 mydebian_0.0.1-1_amd64.deb
+Checksums-Sha256:
+ ba01df51f2998fdd26e00c8e930b1401d9f123d0decef8a33fdbfa9f143f9e74 835 mydebian_0.0.1-1.dsc
+ b03160d31996de163fff3f6bde9a6975bc78b0a3562c1f4d2ff25d7966662944 2436 mydebian_0.0.1.orig.tar.xz
+ 20a5e994d1207c8476731fdf722aecb75d782ccbfc0d26e8d7d84cd8d8de9573 7876 mydebian_0.0.1-1.debian.tar.xz
+ 4dd5b4946e2dc6e66d513495c712ecd3d282525204e504db53f4a087c3f22f5d 5713 mydebian_0.0.1-1_amd64.buildinfo
+ 5b14aade8ad92b11e0aa1a11560ee20c05f61d93d0218eb20e1a1df22ddf6a46 2368 mydebian_0.0.1-1_amd64.deb
+Files:
+ 466dafa8ff3b939e130aea20ae688d7f 835 unknown optional mydebian_0.0.1-1.dsc
+ 2d55893e288313e7229664e881b49ff4 2436 unknown optional mydebian_0.0.1.orig.tar.xz
+ 28f4a1424adc7ced62c0240929fe423f 7876 unknown optional mydebian_0.0.1-1.debian.tar.xz
+ b3b178c6c0381a3bcab124ca9883beeb 5713 unknown optional mydebian_0.0.1-1_amd64.buildinfo
+ 68043ad152eddd3703ab027cc59a2250 2368 unknown optional mydebian_0.0.1-1_amd64.deb
