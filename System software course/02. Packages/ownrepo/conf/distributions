@@ -1,0 +1,9 @@
+Description: my local repository
+Origin: Ubuntu
+Suite: testing
+AlsoAcceptFor: unstable experimental
+Codename: karmic
+Version: 5.0
+Architectures: i386 amd64 source
+Components: soft games
+UDebComponents: soft games

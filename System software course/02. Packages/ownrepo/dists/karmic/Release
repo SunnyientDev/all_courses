@@ -1,0 +1,89 @@
+Origin: Ubuntu
+Suite: testing
+Codename: karmic
+Version: 5.0
+Date: Sat, 10 Apr 2021 07:42:45 UTC
+Architectures: i386 amd64
+Components: soft games
+Description: my local repository
+MD5Sum:
+ d41d8cd98f00b204e9800998ecf8427e 0 soft/binary-i386/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 soft/binary-i386/Packages.gz
+ fe0fe89d59759eb10b1b64f201cb7437 113 soft/binary-i386/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 soft/debian-installer/binary-i386/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 soft/debian-installer/binary-i386/Packages.gz
+ d41d8cd98f00b204e9800998ecf8427e 0 soft/binary-amd64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 soft/binary-amd64/Packages.gz
+ 19b0fb697f15bf7fbe42a98455b544d4 114 soft/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 soft/debian-installer/binary-amd64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 soft/debian-installer/binary-amd64/Packages.gz
+ d41d8cd98f00b204e9800998ecf8427e 0 soft/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 soft/source/Sources.gz
+ 89aa4199c8cce446c4766ccf78c9d96c 115 soft/source/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 games/binary-i386/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 games/binary-i386/Packages.gz
+ 5a7e9f00eb482fe1759172d04cc80130 114 games/binary-i386/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 games/debian-installer/binary-i386/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 games/debian-installer/binary-i386/Packages.gz
+ d41d8cd98f00b204e9800998ecf8427e 0 games/binary-amd64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 games/binary-amd64/Packages.gz
+ 588736d8d7b1cc292090d48acf94bd72 115 games/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 games/debian-installer/binary-amd64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 games/debian-installer/binary-amd64/Packages.gz
+ d41d8cd98f00b204e9800998ecf8427e 0 games/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 games/source/Sources.gz
+ 6a5ab6a6630f4ffe333c5a42e06f4b3e 116 games/source/Release
+SHA1:
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 soft/binary-i386/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 soft/binary-i386/Packages.gz
+ 8c476c8afc6ca18f2d792a4078db81ddd27b7e60 113 soft/binary-i386/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 soft/debian-installer/binary-i386/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 soft/debian-installer/binary-i386/Packages.gz
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 soft/binary-amd64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 soft/binary-amd64/Packages.gz
+ 0f595f5182af0be93de690a4194dc6460754b786 114 soft/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 soft/debian-installer/binary-amd64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 soft/debian-installer/binary-amd64/Packages.gz
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 soft/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 soft/source/Sources.gz
+ cfcb64f14e24639e08f8124f7c3a3667ef37191b 115 soft/source/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 games/binary-i386/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 games/binary-i386/Packages.gz
+ d077b8a4f704e7d78432c91a15ef62d1c6369018 114 games/binary-i386/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 games/debian-installer/binary-i386/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 games/debian-installer/binary-i386/Packages.gz
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 games/binary-amd64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 games/binary-amd64/Packages.gz
+ 1be5b12b83e13567294401ec012b878995123a6a 115 games/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 games/debian-installer/binary-amd64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 games/debian-installer/binary-amd64/Packages.gz
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 games/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 games/source/Sources.gz
+ 16b4e6bcd0d12793941bfd52a4cbdfcb2dc3482b 116 games/source/Release
+SHA256:
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 soft/binary-i386/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 soft/binary-i386/Packages.gz
+ 75acfd125428e6dbd6435da95e189b542e0cee79f1776e2bef7a28436fb15b43 113 soft/binary-i386/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 soft/debian-installer/binary-i386/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 soft/debian-installer/binary-i386/Packages.gz
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 soft/binary-amd64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 soft/binary-amd64/Packages.gz
+ 571fe7a7bd43b8d3b521ebc8a438f14953b29e50ed6e3a48fb6a949e7dc2607a 114 soft/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 soft/debian-installer/binary-amd64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 soft/debian-installer/binary-amd64/Packages.gz
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 soft/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 soft/source/Sources.gz
+ 4647dd4a6cbb4d0e45e5b802213ef30859c073757b9f5200c10db09bc9fd953a 115 soft/source/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 games/binary-i386/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 games/binary-i386/Packages.gz
+ 2bd376505017e98ed6c5dcf29c54295dd91e561ab229c7bd99a3dab8fdb58b2c 114 games/binary-i386/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 games/debian-installer/binary-i386/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 games/debian-installer/binary-i386/Packages.gz
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 games/binary-amd64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 games/binary-amd64/Packages.gz
+ 49bcd110ed27506603bd38050611ae87b62e1d92f4bc90ba5d35766bdce6ee82 115 games/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 games/debian-installer/binary-amd64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 games/debian-installer/binary-amd64/Packages.gz
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 games/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 games/source/Sources.gz
+ 55e496ed6f440e6c322eceea6f54bbb57e3f13f59d535587757282931970b95b 116 games/source/Release
