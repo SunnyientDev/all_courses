@@ -16,7 +16,7 @@ def parse_b(offset, byte_string):
     # (L) uint64 - 8 байт
     # (i) int32 - 4 байта
 
-    b_bytes = byte_string[offset:offset + B_SIZE]
+    b_bytes = byte_string[offset:offset + B_SIZE - 1]
     b_parsed = struct.unpack('<cLi', b_bytes)
 
     return {'B1': b_parsed[0], 
