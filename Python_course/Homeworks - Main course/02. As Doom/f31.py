@@ -15,7 +15,7 @@ def parse_b(offset, byte_string):
     b_bytes = byte_string[offset:offset + B_SIZE]
     b_parsed = struct.unpack('<6sQi', b_bytes)
 
-    return {'B1': b_parsed[0], 
+    return {'B1': b_parsed[0].decode('utf-8'), 
             'B2': b_parsed[1],
             'B3': b_parsed[2]}
 
