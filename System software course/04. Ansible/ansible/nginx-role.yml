@@ -1,0 +1,7 @@
+---
+- name: Install and config Nginx, PHP-CLI via Role
+  hosts: webservers
+  become: yes
+
+  roles:
+    - nginx

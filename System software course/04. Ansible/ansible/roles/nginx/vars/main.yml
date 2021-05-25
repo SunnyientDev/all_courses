@@ -1,0 +1,5 @@
+﻿---
+# vars file for nginx
+html_dir: /usr/share/nginx/html
+remote_server_user: user
+student: "Oronovskaya Alexandra Dmitrievna IVBO-07-19 variant 20"

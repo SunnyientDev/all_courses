@@ -1,0 +1,6 @@
+---
+# handlers file for nginx
+  - name: Nginx Systemd
+    shell: /usr/bin/systemctl start nginx
+  - name: Reload Nginx
+    shell: /usr/bin/systemctl reload nginx
