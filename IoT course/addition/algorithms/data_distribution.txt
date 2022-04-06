@@ -1,0 +1,5 @@
+date: string
+time: string
+brightness: int
+temperature: float
+humidity: float

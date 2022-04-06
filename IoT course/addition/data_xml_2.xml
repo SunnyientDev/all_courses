@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+<csv_data>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:14</time>
+    <brightness>518.0</brightness>
+    <temperature>10.01</temperature>
+    <humidity>16.99</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:14</time>
+    <brightness>537.0</brightness>
+    <temperature>10.011</temperature>
+    <humidity>16.98</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:15</time>
+    <brightness>557.0</brightness>
+    <temperature>10.017</temperature>
+    <humidity>16.97</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:15</time>
+    <brightness>578.0</brightness>
+    <temperature>10.02</temperature>
+    <humidity>16.96</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:15</time>
+    <brightness>599.0</brightness>
+    <temperature>10.026</temperature>
+    <humidity>16.95</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:15</time>
+    <brightness>621.0</brightness>
+    <temperature>10.03</temperature>
+    <humidity>16.94</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:15</time>
+    <brightness>644.0</brightness>
+    <temperature>10.046</temperature>
+    <humidity>16.93</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:15</time>
+    <brightness>668.0</brightness>
+    <temperature>10.055</temperature>
+    <humidity>16.92</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:15</time>
+    <brightness>693.0</brightness>
+    <temperature>10.059</temperature>
+    <humidity>16.91</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:15</time>
+    <brightness>719.0</brightness>
+    <temperature>10.068</temperature>
+    <humidity>16.9</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:15</time>
+    <brightness>746.0</brightness>
+    <temperature>10.072</temperature>
+    <humidity>16.89</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:16</time>
+    <brightness>774.0</brightness>
+    <temperature>10.078</temperature>
+    <humidity>16.88</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:16</time>
+    <brightness>803.0</brightness>
+    <temperature>10.095</temperature>
+    <humidity>16.87</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:16</time>
+    <brightness>833.0</brightness>
+    <temperature>10.102</temperature>
+    <humidity>16.86</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:16</time>
+    <brightness>864.0</brightness>
+    <temperature>10.116</temperature>
+    <humidity>16.85</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:16</time>
+    <brightness>896.0</brightness>
+    <temperature>10.126</temperature>
+    <humidity>16.84</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:16</time>
+    <brightness>929.0</brightness>
+    <temperature>10.145</temperature>
+    <humidity>16.83</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:16</time>
+    <brightness>963.0</brightness>
+    <temperature>10.155</temperature>
+    <humidity>16.82</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:16</time>
+    <brightness>999.0</brightness>
+    <temperature>10.16</temperature>
+    <humidity>16.81</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:16</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.178</temperature>
+    <humidity>16.8</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:16</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.186</temperature>
+    <humidity>16.79</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:17</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.191</temperature>
+    <humidity>16.78</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:17</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.196</temperature>
+    <humidity>16.77</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:17</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.216</temperature>
+    <humidity>16.76</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:17</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.227</temperature>
+    <humidity>16.75</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:17</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.232</temperature>
+    <humidity>16.74</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:17</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.233</temperature>
+    <humidity>16.73</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:17</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.248</temperature>
+    <humidity>16.72</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:17</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.253</temperature>
+    <humidity>16.71</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:17</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.263</temperature>
+    <humidity>16.7</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:18</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.269</temperature>
+    <humidity>16.69</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:18</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.27</temperature>
+    <humidity>16.68</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:18</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.285</temperature>
+    <humidity>16.67</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:18</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.293</temperature>
+    <humidity>16.66</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:18</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.31</temperature>
+    <humidity>16.65</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:18</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.326</temperature>
+    <humidity>16.64</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:18</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.346</temperature>
+    <humidity>16.63</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:18</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.362</temperature>
+    <humidity>16.62</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:18</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.376</temperature>
+    <humidity>16.61</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:18</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.394</temperature>
+    <humidity>16.6</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:19</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.4</temperature>
+    <humidity>18.26</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:19</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.406</temperature>
+    <humidity>20.086</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:19</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.406</temperature>
+    <humidity>22.095</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:19</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.425</temperature>
+    <humidity>24.305</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:19</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.441</temperature>
+    <humidity>26.736</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:19</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.444</temperature>
+    <humidity>29.41</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:19</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.448</temperature>
+    <humidity>32.351</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:19</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.465</temperature>
+    <humidity>35.586</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:19</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.472</temperature>
+    <humidity>39.145</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:20</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.484</temperature>
+    <humidity>43.06</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:20</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.489</temperature>
+    <humidity>47.366</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:20</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.502</temperature>
+    <humidity>52.103</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:20</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.513</temperature>
+    <humidity>57.313</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:20</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.527</temperature>
+    <humidity>63.044</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:20</time>
+    <brightness>1036.0</brightness>
+    <temperature>10.528</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:20</time>
+    <brightness>1026.0</brightness>
+    <temperature>10.84384</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:20</time>
+    <brightness>1016.0</brightness>
+    <temperature>11.1691552</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:20</time>
+    <brightness>1006.0</brightness>
+    <temperature>11.504229856</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:20</time>
+    <brightness>996.0</brightness>
+    <temperature>11.84935675168</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:21</time>
+    <brightness>986.0</brightness>
+    <temperature>12.2048374542304</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:21</time>
+    <brightness>976.0</brightness>
+    <temperature>12.570982577857313</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:21</time>
+    <brightness>966.0</brightness>
+    <temperature>12.948112055193032</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:21</time>
+    <brightness>956.0</brightness>
+    <temperature>13.336555416848825</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:21</time>
+    <brightness>946.0</brightness>
+    <temperature>13.73665207935429</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:21</time>
+    <brightness>937.0</brightness>
+    <temperature>14.148751641734918</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:21</time>
+    <brightness>1026.0</brightness>
+    <temperature>14.573214190986967</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:21</time>
+    <brightness>1016.0</brightness>
+    <temperature>15.010410616716577</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:21</time>
+    <brightness>1006.0</brightness>
+    <temperature>15.460722935218074</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:22</time>
+    <brightness>996.0</brightness>
+    <temperature>15.924544623274617</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:22</time>
+    <brightness>986.0</brightness>
+    <temperature>16.402280961972856</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:22</time>
+    <brightness>976.0</brightness>
+    <temperature>16.894349390832044</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:22</time>
+    <brightness>966.0</brightness>
+    <temperature>17.401179872557005</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:22</time>
+    <brightness>956.0</brightness>
+    <temperature>17.923215268733717</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:22</time>
+    <brightness>946.0</brightness>
+    <temperature>18.46091172679573</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:22</time>
+    <brightness>937.0</brightness>
+    <temperature>19.0147390785996</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:22</time>
+    <brightness>1026.0</brightness>
+    <temperature>14.573214190986967</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:22</time>
+    <brightness>1016.0</brightness>
+    <temperature>15.010410616716577</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:22</time>
+    <brightness>1006.0</brightness>
+    <temperature>15.460722935218074</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:23</time>
+    <brightness>996.0</brightness>
+    <temperature>15.924544623274617</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:23</time>
+    <brightness>986.0</brightness>
+    <temperature>16.402280961972856</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:23</time>
+    <brightness>976.0</brightness>
+    <temperature>16.894349390832044</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:23</time>
+    <brightness>966.0</brightness>
+    <temperature>17.401179872557005</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:23</time>
+    <brightness>956.0</brightness>
+    <temperature>17.923215268733717</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:23</time>
+    <brightness>946.0</brightness>
+    <temperature>18.46091172679573</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:23</time>
+    <brightness>937.0</brightness>
+    <temperature>19.0147390785996</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:23</time>
+    <brightness>928.0</brightness>
+    <temperature>14.573214190986967</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:23</time>
+    <brightness>919.0</brightness>
+    <temperature>15.010410616716577</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:24</time>
+    <brightness>910.0</brightness>
+    <temperature>15.460722935218074</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:24</time>
+    <brightness>901.0</brightness>
+    <temperature>15.924544623274617</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:24</time>
+    <brightness>892.0</brightness>
+    <temperature>16.402280961972856</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:24</time>
+    <brightness>883.0</brightness>
+    <temperature>16.894349390832044</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:24</time>
+    <brightness>874.0</brightness>
+    <temperature>17.401179872557005</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:24</time>
+    <brightness>865.0</brightness>
+    <temperature>17.923215268733717</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:24</time>
+    <brightness>856.0</brightness>
+    <temperature>18.46091172679573</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:24</time>
+    <brightness>847.0</brightness>
+    <temperature>19.0147390785996</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:24</time>
+    <brightness>928.0</brightness>
+    <temperature>19.58518125095759</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:24</time>
+    <brightness>919.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:25</time>
+    <brightness>910.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:25</time>
+    <brightness>901.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:25</time>
+    <brightness>892.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:25</time>
+    <brightness>883.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:25</time>
+    <brightness>874.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:25</time>
+    <brightness>865.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:25</time>
+    <brightness>856.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:25</time>
+    <brightness>847.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:25</time>
+    <brightness>928.0</brightness>
+    <temperature>19.58518125095759</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:26</time>
+    <brightness>919.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:26</time>
+    <brightness>910.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:26</time>
+    <brightness>901.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:26</time>
+    <brightness>892.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:26</time>
+    <brightness>883.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:26</time>
+    <brightness>874.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:26</time>
+    <brightness>865.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:26</time>
+    <brightness>856.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+<row>
+    <date>2021-11-15</date>
+    <time>22:38:26</time>
+    <brightness>847.0</brightness>
+    <temperature>20.172736688486317</temperature>
+    <humidity>69.348</humidity>
+</row>
+</csv_data>

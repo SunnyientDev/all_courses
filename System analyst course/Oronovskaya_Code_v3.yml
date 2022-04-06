@@ -1,0 +1,566 @@
+management:
+  endpoints.web:
+    base-path: /admin
+    exposure.include: health,info,env,prometheus,metrics
+  endpoint:
+    metrics.enabled: true
+    prometheus.enabled: true
+  metrics.export.prometheus.enabled: true
+
+spring:
+  application.name: nimb-wscustomeraccountlistgba
+  sleuth.rxjava.schedulers.hook.enabled: false
+  main.allow-bean-definition-overriding: true
+  zipkin:
+    enabled: false
+  client:
+    logging-enabled: true
+  task:
+    # Spring executor configuration, corresponding to TaskExecutionProperties configuration class. For spring asynchronous tasks, this executor is used.
+    execution:
+      # thread-name-prefix: task- # Prefix for the thread name of the thread pool. The default is task -. It is recommended to set it according to your own application
+      pool: # Thread pool related
+        core-size: 50 # The number of core threads, the number of threads initialized when the thread pool is created. The default is 8.
+        # max-size: 20 # The maximum number of threads, the maximum number of threads in the thread pool. Only after the buffer queue is full, can the threads that exceed the number of core threads be applied. Default is Integer.MAX_VALUE
+        # keep-alive: 60s # Allow the idle time of the thread. When the idle time exceeds that of the thread outside the core thread, it will be destroyed after the idle time arrives. Default is 60 seconds
+        # queue-capacity: 200 # Buffer queue size, the size of the queue used to buffer the execution of tasks. Default is Integer.MAX_VALUE .
+        # allow-core-thread-timeout: true # Whether to allow core thread timeout, that is, to enable dynamic growth and reduction of thread pool. The default is true.
+      # shutdown:
+      #   await-termination: true # Whether to wait for the scheduled task to complete when the application is closed. The default value is false, and it is recommended to set it to true
+      #   await-termination-period: 60 # The maximum time, in seconds, to wait for a task to complete. The default is 0, set according to your own application
+
+# feign.httpclient.max-connections: 200 # default 200
+# feign.httpclient.max-connections-per-route: 50 # default 50
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
+
+filter:
+  filters:
+    M2ALL:
+      types: >
+        EE, SE, FP, EH, EF, EI, EL, C2, GK, EG, SB, CF, EM, EO, E5, E6, E7, E8,
+        P9, MJ, PZ, ES, GZ, G9, EJ, EK, AR, BT, BU, BV, BW, BX, BY, GO, ER, E9, IY,
+        ET, VV, FU, SA, MH, AX, FT, ME, FS, FY, A1, A2, A3, A4, A5, ZN, ZH, GL,
+        R9, GH, ZS
+      expression: >
+        (
+          @helper.typeNotIn(account, {"GH", "R9"}) or (@helper.typeIn(account, "GH") and @helper.hasBalanceOrOverdraft(account))
+        )
+        and @helper.isValidTariffPlan(account)
+        and account.ai30 == 'N' and account.ai20 == 'N'
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and @helper.currencyIn(account, {"RUR", "USD", "EUR", "CHF", "GBP", "JPY", "CAD", "A98", "A99", "A76", "A33", "CNY", "SEK"})
+        or (
+          @helper.typeIn(account, 'R9') and @helper.isValidTariffPlan(account)
+          and account.ai30 == 'N' and account.ai20 == 'N' and account.ai14 == 'N' and account.ai80 == 'N'
+        )
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByCurrency({"RUR", "EUR", "USD", "GBP", "CAD"}),
+          @helper.sortByType({"EE", "SE", "EH", "GZ", "EG", "FP", "ET", "VV", "EL", "A1", "A2", "A3", "A4", "A5", "EI", "EF", "ES", "EJ", "EK", "SA", "E5", "E6", "E7", "E8", "E9", "MH", "AW", "ME", "FS", "R9"}),
+          @helper.sortByAmount("desc")
+        })
+    M2MOB:
+      types: >
+        EE, SE, EH, GZ, MH, EG, GH, GL, ZH
+      currencies: >
+        RUR
+      expression: >
+        (
+          (@helper.typeIn(account, {"EG", "GH"}) and @helper.hasBalanceOrOverdraft(account))
+          or @helper.typeNotIn(account, {"EG", "GH"})
+        )
+        and @helper.isValidTariffPlan(account)
+        and account.ai12 == 'N' and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N' and account.ai82 == 'N'
+        and account.ai87 == 'N' and account.aic4 == 'N'
+      sorting: >
+        @helper.sortByType({"GZ", "EE", "SE", "EH", "EG", "MH"})
+    M2IPT:
+      types: >
+        EE, SE, EH, GZ, MH, EL, FY, GL
+      currencies: >
+        RUR
+      expression: >
+        @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and account.ai12 == 'N' and account.ai82 == 'N' and account.ai87 == 'N'
+        and account.aic4 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType({"EE", "SE", "EH", "EF", "EI", "EJ", "EK", "EL", "ER", "ES", "ET", "GO", "GZ", "MH", "EL", "FY"}),
+          @helper.sortByCurrency({"RUR", "USD", "EUR", "JPY"}),
+          @helper.sortByAmount("desc")
+        })
+    M2EML:
+      types: >
+        EE, SE, EH, GZ, MH, GL
+      currencies: >
+        RUR
+      expression: >
+        @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and account.ai12 == 'N' and account.ai82 == 'N' and account.ai87 == 'N'
+        and account.aic4 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    M2BRO:
+      shared: false
+      types: >
+        EE, EH
+      expression: >
+        @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and account.ai12 == 'N' and account.ai82 == 'N'
+        and account.ai83 == 'N' and account.ai87 == 'N' and account.aic4 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByCurrency({"RUR", "USD", "EUR"}),
+          @helper.sortByAmount("desc")
+        })
+    M2OWN:
+      types: >
+        EE, SE, FP, EH, EL, EI, EF, ES, GZ, EJ, EK, AR, ER, E9, ET,
+        VV, FU, SA, MH, AX, ME, C2, FY, A1, A2, A3, A4, A5, ZH, GL,
+        GO, R9
+      expression: >
+        (
+          (@helper.typeIn(account, "GO") and goal != null)
+          or @helper.typeNotIn(account, {"GO", "R9"})
+        )
+        and @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and account.ai12 == 'N' and account.ai82 == 'N' and account.ai87 == 'N'
+        and account.aic4 == 'N'
+        or (
+          @helper.typeIn(account, 'R9') and @helper.isValidTariffPlan(account)
+          and account.ai14 == 'N' and account.ai20 == 'N' and account.ai30 == 'N' and account.ai80 == 'N'
+        )
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByCurrency({"RUR", "EUR", "USD", "JPY"}),
+          @helper.sortByAmount("desc")
+        })
+    C3DEPW:
+      shared: false
+      types: >
+        EO, E5, E6, E7, E8
+      currencies: >
+        RUR, USD, EUR
+      expression: >
+        @helper.isValidTariffPlan(account)
+        and account.ai17 == 'N' and account.ai30 == 'N' and account.ai80 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByCurrency({"RUR", "USD", "EUR"}),
+          @helper.sortByAmount("desc")
+        })
+    C3OWN:
+      shared: false
+      types: >
+        EE, SE, FP, EH, EL, EI, EF, ES, GZ, EJ, EK, AR, ER, E9, ET, VV, FU, SA, MH, AX, ME,
+        C2, FY, A1, A2, A3, A4, A5,
+        GO, R9
+      expression: >
+        (
+          @helper.typeIn(account, "GO") and goal != null
+          or @helper.typeNotIn(account, {"GO","R9"})
+        )
+        and (@helper.isValidTariffPlan(account) or @helper.hasBalanceOrOverdraft(account))
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and account.ai12 == 'N' and account.ai82 == 'N' and account.ai87 == 'N'
+        and account.aic4 == 'N' and account.ai83 == 'N'
+        or (
+          @helper.typeIn(account, 'R9') and @helper.isValidTariffPlan(account)
+          and account.ai30 == 'N' and account.ai20 == 'N' and account.ai14 == 'N' and account.ai80 == 'N'
+        )
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByCurrency({"RUR", "USD", "EUR", "CHF", "GBP", "JPY", "CAD", "CNY"}),
+          @helper.sortByType({"GZ", "EE", "A1", "A2", "A3", "A4", "A5", "VV", "SE", "FP", "EH", "EL", "EI", "EF", "ES", "EJ", "EK", "AR", "SA", "MH", "AW", "ME", "C2", "FY"}),
+          @helper.sortByAmount("desc")
+        })
+    C3OWNC:
+      shared: false
+      types: >
+        EE, SE, EH, EL, EF, CF, GK, P9, MJ, PZ, ES, GZ, G9, EJ, EK, AR, BT, BU, BV, BW,
+        BX, BY, ER, ET, VV, MH, AX, ME, C2, FY, A1, A2, A3, A4, A5, EG,
+        SB, GH, R9
+      expression: >
+        (
+          (@helper.typeIn(account, {"EG", "SB"}) and @helper.hasBalanceOrOverdraft(account))
+          or (@helper.typeIn(account, "GH") and @helper.hasBalanceOrOverdraft(account) and goal != null)
+          or (@helper.typeNotIn(account, {"EG", "SB", "GH", "R9"}))
+        )
+        and (@helper.isValidTariffPlan(account) or @helper.hasBalanceOrOverdraft(account))
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and account.ai11 == 'N' and account.ai82 == 'N'
+        or (
+          @helper.typeIn(account, 'R9') and @helper.isValidTariffPlan(account)
+          and account.ai30 == 'N' and account.ai20 == 'N' and account.ai14 == 'N' and account.ai80 == 'N'
+        )
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByCurrency({"RUR", "USD", "EUR"}),
+          @helper.sortByAmount("desc")
+        })
+    C3ALL:
+      shared: false
+      types: >
+        EE, SE, FP, EH, EF, EI, EL, C2, GK, EG, SB, CF, EM, EO, E5, E6, E7, E8, P9, MJ, PZ,
+        ES, GZ, G9, EJ, EK, AR, BT, BU, BV, BW, BX, BY, GO, ER, E9, IY, ET, VV, FU, SA, MH,
+        AX, FT, ME, FS, FY, A1, A2, A3, A4, A5,
+        GH, R9
+      expression: >
+        (
+          (@helper.typeIn(account, "GH") and @helper.hasBalanceOrOverdraft(account))
+          or (@helper.typeIn(account, {"EG", "SB"}) and @helper.hasBalanceOrOverdraft(account))
+          or (@helper.typeNotIn(account, {"EG", "SB", "GH", "R9"}))
+        )
+        and @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and @helper.currencyIn(account, {"RUR", "USD", "EUR", "CHF", "GBP", "JPY", "CAD", "A98", "A99", "A76", "A33", "CNY", "SEK"})
+        or (
+          @helper.typeIn(account, 'R9') and @helper.isValidTariffPlan(account)
+          and account.ai30 == 'N' and account.ai20 == 'N'
+          and account.ai14 == 'N' and account.ai80 == 'N'
+        )
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    C3IPT:
+      types: >
+        EE, SE, EH, GZ, MH, EL, FY, GL
+      currencies: >
+        RUR
+      expression: >
+        @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and account.ai12 == 'N' and account.ai82 == 'N'
+        and account.ai87 == 'N' and account.aic4 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType({"EE", "SE", "EH", "EF", "EI", "EJ", "EK", "EL", "ER", "ES", "ET", "GO", "GZ", "MH", "EL", "FY"}),
+          @helper.sortByCurrency({"RUR", "USD", "EUR", "JPY"}),
+          @helper.sortByAmount("desc")
+        })
+    LKDFLT:
+      expression: >
+        (account.ai17 == 'N' or (account.ai17 == 'Y' and account.act == 'CA' and account.sac == '13'))
+        and account.ai80 == 'N'
+        and (account.act != 'BF' or account.sac == '16')
+        and (account.act != 'KI' or account.sac == '88')
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType({"CA"}),
+          @helper.sortByCurrency({"RUR", "USD", "EUR"}),
+          @helper.sortByOpenDate("asc")
+        })
+    LKRPAY:
+      expression: >
+        ((@helper.typeIn(account, {"CR","KZ","CY","FR","C8","FN","FL","FV","BS","D7","A6","ZR"})
+          or (@helper.typeIn(account, {"CA"}) and account.sac != '23')) and   @helper.currencyIn(account, {"RUR"}))
+        and account.ai30 == 'N'
+        and account.ai17 == 'N'
+        and account.ai80 == 'N'
+      sorting: >
+          @helper.sortBy({
+            @helper.sortByType("asc")
+          })
+    BMDFLT:
+      expression: >
+        account.ai30 == 'N'
+        and account.ai80 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+        })
+    LKZPN:
+      shared: false
+      expression: >
+        ((@helper.typeIn(account, {"CR","CL","BS","D7"})
+          or (@helper.typeIn(account, {"CA"}) and account.sac != '23')))
+        and account.ai30 == 'N'
+        and account.ai17 == 'N'
+        and account.ai80 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    LKTRAC:
+      shared: false
+      types: >
+        CT, CR
+      expression: >
+        @helper.currencyNotIn(account, {"RUR"})
+        and account.ai30 == 'N'
+        and account.ai17 == 'N'
+        and account.ai80 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    LKH14:
+      shared: false
+      expression: >
+        ((@helper.typeIn(account, {"CA"}) and account.sac != '23' and @helper.currencyIn(account, {"RUR"}))
+          or (@helper.typeIn(account, {"CY"}) and @helper.currencyIn(account, {"RUR"}) and @helper.currencyIn(account, {"RUR","USD","EUR"})))
+        and account.ai30 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    BMDFLN:
+      shared: false
+      expression: >
+        account.ai30 == 'N'
+        and account.ai80 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    LKOWNC:
+      shared: false
+      types: >
+        EE, SE, EH, EL, EI, EF, CF,
+        GK, P9, MJ, PZ, ES, GZ,
+        G9, EJ, EK, AR, BT, BU,
+        BV, BW, BX, BY, ER, E9,
+        ET, VV, FU, MH, AX, ME,
+        C2, FY, A1, A2, A3, A4,
+        A5,
+        EG, SB, GH,  R9
+      expression: >
+        (
+          @helper.typeIn(account, {"EG", "SB"}) and @helper.hasBalanceOrOverdraft(account)
+          or @helper.typeIn(account, "GH") and @helper.hasBalanceOrOverdraft(account)
+          or @helper.typeIn(account, "GO") and goal != null
+        )
+        and @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and account.ai11 == 'N' and account.ai82 == 'N'
+        and (account.p3r != '998' or account.p3r == '998' and account.cad == '0001-01-01' and account.ama < 0)
+        or (
+          @helper.typeIn(account, 'R9') and @helper.isValidTariffPlan(account)
+          and account.ai14 == 'N' and account.ai20 == 'N'
+          and account.ai30 == 'N'
+        )
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByCurrency({"USD", "EUR", "CHF", "GBP", "JPY", "CAD", "CNY"}),
+          @helper.sortByType({"EE", "SE", "EH", "EL", "A1", "A2", "A3", "A4", "A5", "EI", "EF", "CF", "GK", "P9", "MJ", "PZ", "ES", "GZ", "G9", "EJ", "EK", "AR", "BT", "BU", "BV", "BW", "BX", "BY", "ER", "E9", "ET", "VV", "GO", "EG", "SB", "GH", "MH", "AW", "ME", "C2", "FY", "R9"}),
+          @helper.sortByAmount("desc")
+        })
+    M2SBP:
+      types: >
+        EE, EH, EL, GZ, MH, SE, GL
+      currencies: >
+        RUR
+      expression: >
+        @helper.isValidTariffPlan(account)
+        and account.ai12 == 'N' and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N' and account.ai82 == 'N'
+        and account.ai83 == 'N' and account.ai87 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType({"GZ", "EE", "EH", "EL", "MH", "SE"})
+        })
+    C3IISC:
+      shared: false
+      expression: >
+        (@helper.typeIn(account, {"ZN"}) and @helper.currencyIn(account, {"RUR"}))
+        and @helper.isValidTariffPlan(account)
+        and account.ai11 == 'N' and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N' and account.ai82 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    M2POD:
+      types: >
+        EE, SE, EH, EL, GZ, MH, GL, R9
+      expression: >
+        @helper.isValidTariffPlan(account) and @helper.currencyIn(account, {"RUR"})
+        and account.ai12 == 'N' and account.ai14 == 'N'
+        and account.ai17 == 'N' and account.ai20 == 'N'
+        and account.ai30 == 'N' and account.ai82 == 'N'
+        or (
+          @helper.typeIn(account, 'R9') and @helper.isValidTariffPlan(account)
+          and account.ai14 == 'N' and account.ai20 == 'N'
+          and account.ai30 == 'N' and account.ai80 == 'N'
+        )
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType({"GZ", "EE", "SE", "EH", "EL", "MH", "R9"})
+        })
+    # new code #
+    M2EXC:
+      types: >
+        EE, SE, FP, EH, EL, EI, EF, ES, GZ, 
+        EJ, EK, AR, ER, E9, ET, VV, FU, SA, 
+        MH, AX, FY, A1, A2, A3, A4, A5, GO
+      expression: >
+        (
+          @helper.typeIn(account, "GO") and goal != null
+          or @helper.typeNotIn(account, "GO")
+        )
+        and @helper.isValidTariffPlan(account)
+        and account.ai12 == 'N' and account.ai14 == 'N'
+        and account.ai17 == 'N' and account.ai20 == 'N'
+        and account.ai30 == 'N' and account.ai82 == 'N'
+        and account.ai87 == 'N' and account.aic4 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    M2INV:
+      shared: false
+      types: >
+        EE, SE, EH, GZ, MH, EG, GH
+      currencies: >
+        RUR
+      expression: >
+        (
+          (@helper.typeIn(account, {"EG", "GH"}) and @helper.hasBalanceOrOverdraft(account))
+          or @helper.typeNotIn(account, {"EG", "GH"})
+        )
+        and @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and account.ai12 == 'N' and account.ai82 == 'N'
+        and account.ai4 == 'N' and account.aic87 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    M2GLC:
+      shared: false
+      types: >
+        GO, EK
+      expression: >
+        @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and account.ai12 == 'N' and account.ai82 == 'N'
+        and account.ai83 == 'N' and account.ai87 == 'N' and account.aic4 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByCurrency({"RUR", "EUR", "USD"}),
+          @helper.sortByAmount("desc")
+        })
+    M2C01C:
+      shared: false
+      types: >
+        EE, SE, EH, EF, CF, GK, P9, MJ, PZ, ES, GZ, G9, EJ, 
+        AR, BT, BU, BV, BW, BX, BY, MH, FY, ZH, GL, EG, GH
+      currencies: >
+        RUR
+      expression: >
+        (
+          (@helper.typeIn(account, {"EG", "GH"}) and @helper.hasBalanceOrOverdraft(account))
+          or @helper.typeNotIn(account, {"EG", "GH"})
+        )
+        and @helper.isValidTariffPlan(account)
+        and account.ai11 == 'N' and account.ai14 == 'N'
+        and account.ai17 == 'N' and account.ai20 == 'N'
+        and account.ai30 == 'N' and account.ai82 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    M2LAST:
+      shared: false
+      types: > 
+        EE, SE, FP, EH, EF, EI, EL, C2, GK, CF, P9, MJ, PZ, ES, 
+        GZ, G9, EJ, EK, AR, BT, BU, BV, BW, BX, BY, ER, E9, IY, 
+        ET, VV, FU, SA, SB, MH, FY, A1, A2, A3, A4, A5, GO, R9
+      expression: >
+        (
+          @helper.typeIn(account, "GO") and goal != null
+          or @helper.typeNotIn(account, {"GO","R9"})
+        )
+        and @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N'
+        and @helper.currencyIn(account, {"RUR", "USD", "EUR", "CHF", "GBP", "JPY", "CAD", "A98", "A99", "A76", "A33", "CNY", "SEK"})
+        or (
+          @helper.typeIn(account, 'R9')
+          and @helper.isValidTariffPlan(account)
+          and account.ai14 == 'N' and account.ai20 == 'N' 
+          and account.ai30 == 'N' and account.ai80 == 'N'
+        )
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType({"EE", "VV", "SE", "FP", "GZ", "EH", "EF", "EI", "A1", "A2", "A3", "A4", "A5",
+          "CF", "EL", "C2", "GK", "KM", "P9", "MJ", "PZ", "ES", "G9", "EJ", "EK", "AR", "GO", "SA", "MH", "FY", "R9"})
+          @helper.sortByCurrency({"RUR", "EUR", "USD", "JPY"}),
+          @helper.sortByAmount("desc")
+        })
+    BMSPAY:
+      shared: false
+      expression: >
+        ((@helper.typeIn(account, {"CA","CR","KZ","CY","FV","C4"})
+        and @helper.currencyIn(account, "RUR"))
+        or ((@helper.typeIn(account, {"CY","CR"}) or (@helper.typeIn(account, {"CA"}) and account.sac != 23))
+        and @helper.currencyNotIn(account, "RUR")))
+        and account.ai17 == 'N' and account.ai30 == 'N' and account.ai80 == 'N'
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("asc")
+        })
+    LKCNIB:
+      expression: >
+        account.ai17 == 'N' and account.ai80 == 'N'
+        and (@helper.typeNotIn(account, "BF") or account.sac == 16)
+        and (@helper.typeNotIn(account, "KI") or account.sac == 88)
+        and (@helper.typeNotIn(account, "K4"))
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByType("CA")
+          @helper.sortByCurrency({"RUR", "EUR", "USD"})
+        })
+    C3IISD:
+      shared: false
+      types: >
+        EE, SE, FP, EH, EL, EI, EF, ES, GZ, EJ, EK, 
+        AR, ER, E9, ET, VV, FU, SA, MH, AX, ME, C2, 
+        FY, A1, A2, A3, A4, A5, ZH, GL, GO, R9
+      expression: >
+        (
+          @helper.typeIn(account, "GO") and goal != null
+          or @helper.typeNotIn(account, {"GO","R9"})
+        )
+        and @helper.currencyIn(account, "RUR")
+        and @helper.isValidTariffPlan(account)
+        and account.ai14 == 'N' and account.ai17 == 'N'
+        and account.ai20 == 'N' and account.ai30 == 'N' 
+        and account.ai12 == 'N' and account.ai82 == 'N'
+        and account.ai4 == 'N' and account.aic87 == 'N'
+        or (
+          @helper.typeIn(account, 'R9')
+          and @helper.currencyIn(account, "RUR")
+          and @helper.isValidTariffPlan(account)
+          and account.ai14 == 'N' and account.ai30 == 'N' 
+          and account.ai20 == 'N' and account.ai80 == 'N'
+        )
+      sorting: >
+        @helper.sortBy({
+          @helper.sortByCurrency("RUR", "EUR", "USD", "JPY")
+          @helper.sortByAmount("desc")
+        })
