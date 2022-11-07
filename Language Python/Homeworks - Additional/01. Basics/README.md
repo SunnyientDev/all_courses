@@ -1,1 +1,0 @@
-Если нотбук не открывается, есть вресия на Colab: https://colab.research.google.com/drive/1yiBKADETB-hG1APZryE0WOLs9U4y32FP?usp=sharing
