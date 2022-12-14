@@ -1,0 +1,25 @@
+[
+  {
+    "type": "sum",
+    "data": {
+      "numbers": [
+        1,
+        2,
+        90
+      ]
+    },
+    "id": 1
+  },
+  {
+    "type": "print",
+    "data": {
+      "words": [
+        "One",
+        "two",
+        "three"
+      ],
+      "delimeter": "-"
+    },
+    "id": 2
+  }
+]
