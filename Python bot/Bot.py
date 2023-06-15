@@ -37,7 +37,6 @@ from telegram import  ReplyKeyboardRemove
 import telegramcalendar
 
 
-TOKEN = "1129048113:AAGpp0FPckxMzROx6pFldr5CNORkW0CXnfM"
 
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
